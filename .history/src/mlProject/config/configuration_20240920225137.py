@@ -5,12 +5,10 @@ from mlProject.utils.common import *
 from mlProject.constants import *
 
 class ConfigurationManager:
-    def __init__(
-        self, 
-        config_filepath = CONFIG_FILE_PATH,
-        params_filepath = PARAMS_FILE_PATH):
-        self.config = read_yaml(config_filepath)
-        self.params = read_yaml(params_filepath)
+    def __init__(self):
+        self.config=read_yaml(CONFIG_FILE_PATH)
+        self.params=read_yaml(PARAMS_FILE_PATH)
+        
         create_directories([self.config.artifacts_root])
         
     def get_data_ingestion_config(self):

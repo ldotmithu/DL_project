@@ -5,12 +5,10 @@ from mlProject.utils.common import *
 from mlProject.constants import *
 
 class ConfigurationManager:
-    def __init__(
-        self, 
-        config_filepath = CONFIG_FILE_PATH,
-        params_filepath = PARAMS_FILE_PATH):
-        self.config = read_yaml(config_filepath)
-        self.params = read_yaml(params_filepath)
+    def __init__(self):
+        self.config=read_yaml(CONFIG_FILE_PATH)
+        self.params=read_yaml(PARAMS_FILE_PATH)
+        
         create_directories([self.config.artifacts_root])
         
     def get_data_ingestion_config(self):
@@ -57,7 +55,7 @@ class ConfigurationManager:
     def get_evaluation_config(self) -> EvaluationConfig:
         eval_config = EvaluationConfig(
             path_of_model="artifacts/training/model.h5",
-            training_data="artifacts/data_ingestion/Chest-CT-Scan-data",
+            training_data="artifacts\data_ingestion\Chest-CT-Scan-data",
             mlflow_uri="https://dagshub.com/ldotmithu/DL_project.mlflow",
             all_params=self.params,
             params_image_size=self.params.IMAGE_SIZE,

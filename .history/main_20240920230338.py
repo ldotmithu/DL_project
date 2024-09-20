@@ -32,8 +32,8 @@ except Exception as e:
 
 Stage_Name=' Model train'
 try:
-    model_eval=EvaluationPipeline()
-    model_eval.main()
+    model_train=ModelTrainPipeline()
+    model_train.main()
 except Exception as e:
     logging.exception(e)
     raise e 

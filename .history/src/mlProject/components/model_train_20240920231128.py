@@ -43,7 +43,7 @@ class ModelTrain:
         self.model.fit(
             self.train_generator,  
             validation_data=self.valid_generator,  
-            epochs=1,  
+            epochs=3,  
             steps_per_epoch=len(self.train_generator),
             validation_steps=len(self.valid_generator),
             verbose=1
