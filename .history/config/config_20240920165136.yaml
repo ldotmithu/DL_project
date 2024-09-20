@@ -9,4 +9,3 @@ data_ingestion:
 prepare_base_model:
   root_dir: artifacts/prepare_base_model
   model_path: artifacts/prepare_base_model/model.h5
-  update_model_path: artifacts/prepare_base_model/update_model.h5

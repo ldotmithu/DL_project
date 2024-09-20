@@ -24,15 +24,3 @@ class ConfigurationManager:
         )    
         
         return data_ingestionn_config
-    
-    def get_base_model_path_config(self):
-        config=self.config.prepare_base_model
-        
-        create_directories([config.root_dir])
-        
-        prepare_base_model_config=BaseModelConfig(
-            root_dir=config.root_dir,
-            model_path=config.model_path,
-            update_model_path=config.update_model_path
-        )
-        return prepare_base_model_config
