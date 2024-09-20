@@ -39,7 +39,7 @@ class ConfigurationManager:
     
     def get_model_train_config(self):
         training = self.config.training
-        training_data = os.path.join(self.config.data_ingestion.unzip_dir, "Chest-CT-Scan-data")
+        training_data = os.path.join(self.config.data_ingestion.unzip_dir, "Chicken-fecal-images")
         create_directories([
             Path(training.root_dir)
         ])

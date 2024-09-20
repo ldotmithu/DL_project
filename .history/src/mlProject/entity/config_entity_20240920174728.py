@@ -18,6 +18,4 @@ class BaseModelConfig:
 @dataclass
 class ModelTrainConfig:
     root_dir:Path
-    trained_model_path:Path
-    update_model_path:Path 
-    training_data: Path   
+    train_model_path:Path    

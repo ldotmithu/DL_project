@@ -38,16 +38,15 @@ class ConfigurationManager:
         return prepare_base_model_config
     
     def get_model_train_config(self):
-        training = self.config.training
-        training_data = os.path.join(self.config.data_ingestion.unzip_dir, "Chest-CT-Scan-data")
-        create_directories([
-            Path(training.root_dir)
-        ])
+        config=self.config.model_train
+        model_train=self.config.training_data
+        training_data = os.path.joi
+        
+        create_directories([config.root_dir])
         
         model_train_config=ModelTrainConfig(
-            root_dir=training.root_dir,
-            trained_model_path=training.trained_model_path,
-            update_model_path=training.update_model_path,
-            training_data=Path(training_data)
+            root_dir=config.root_dir,
+            train_model_path=config.train_model_path,
+            update_model_path=config.update_model_path
         )
         return model_train_config

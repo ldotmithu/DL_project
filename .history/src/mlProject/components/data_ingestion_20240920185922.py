@@ -14,7 +14,7 @@ class DataIngestion:
                 logging.info('Download Zip Data')
                 
         else:
-            logging.info('File Already exists')        
+            logging.info('File Alredy exists')        
             
     def extract_file(self):
         unzip_path=self.config.unzip_dir
